@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTDMapper3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<mapper namespace="com.example.demo.mapper.UserMapper">
+		<select id="userList" resultType="com.example.demo.vo.UserVO">
+			select user_id as userId
+				, user_nm as userNm
+			from sys_user_mst
+		</select>
+		<select id="fetchUserById" parameterType="String"
+			resultType="com.example.demo.vo.UserVO">
+			select user_id
+				, user_nm
+			 from sys_user_mst
+			where user_id = #{userId}
+		</select>
+		
+		<insert id="insertUser" parameterType="com.example.demo.vo.UserVO">
+			insert into sys_user_mst
+			() values ()
+		</insert>
+		
+		<update id="updateUser" parameterType="com.example.demo.vo.UserVO">
+			update sys_user_mst
+			   set user_nm = #{userNm}
+		</update>
+	</mapper>
+	
