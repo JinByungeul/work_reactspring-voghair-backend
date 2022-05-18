@@ -5,13 +5,13 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 	
 	<mapper namespace="com.example.demo.mapper.UserMapper">
-		<select id="userList" resultType="com.example.demo.vo.UserVO">
-			select user_id as userId
-				, user_nm as userNm
+		<select id="userList" resultType="paramMap">
+			select user_id
+				, user_nm
 			from sys_user_mst
 		</select>
 		<select id="fetchUserById" parameterType="String"
-			resultType="com.example.demo.vo.UserVO">
+			resultType="paramMap">
 			select user_id
 				, user_nm
 			 from sys_user_mst
