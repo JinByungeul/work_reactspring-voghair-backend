@@ -1,4 +1,4 @@
-package com.example.demo.vo;
+package com.example.demo.user.service.vo;
 
 import lombok.Data;
 

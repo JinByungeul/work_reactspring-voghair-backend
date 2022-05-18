@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.user.web;
 
 import java.util.List;
 
@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.mapper.UserMapper;
-import com.example.demo.vo.UserVO;
+import com.example.demo.cmmn.dataaccess.util.ParamMap;
+import com.example.demo.user.service.impl.UserMapper;
+import com.example.demo.user.service.vo.UserVO;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -23,7 +24,7 @@ public class UserController {
 	UserMapper userMapper;
 	
 	@GetMapping
-	public List<UserVO> userList() {
+	public List<ParamMap> userList() {
 		System.out.println(userMapper.userList());
 		System.out.println("Success userList!");
 		return userMapper.userList();
@@ -36,8 +37,8 @@ public class UserController {
 	}
 	
 	@GetMapping("/{userId}")
-	public UserVO fetchUserByID(@PathVariable String userId) {
-		UserVO fetchUser = userMapper.fetchUserById(userId);
+	public ParamMap fetchUserByID(@PathVariable String userId) {
+		ParamMap fetchUser = userMapper.fetchUserById(userId);
 		System.out.println(fetchUser);
 		return fetchUser;
 	}
