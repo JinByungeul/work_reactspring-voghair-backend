@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<!-- Return VO 정의 -->
+		<typeAlias alias="paramMap" type="com.example.demo.cmmn.dataaccess.util.ParamMap" />
+		<typeAlias alias="hashMap" type="java.util.HashMap" />
+		
+		<!-- 로그인 VO -->
+<!--  		<typeAlias alias="loginVO" type="sehwa.cmn.login.service.LoginVO" /> -->
+		
+		<!-- 검색용 VO -->
+<!-- 		<typeAlias alias="searchVO" type="sehwa.cmn.cmn.service.SearchVO" /> -->
+		
+		<!-- 그리드용 VO -->
+<!-- 		<typeAlias alias="gridVO" type="sehwa.cmn.cmn.service.GridRowVO" /> -->
+		
+		
+		<!-- sys (시스템 관리) -->
+<!-- 		<typeAlias alias="authVO" type="sehwa.sys.auth.service.AuthVO" /> -->
+<!-- 		<typeAlias alias="cmcdVO" type="sehwa.sys.cmcd.service.CmcdVO" /> -->
+<!-- 		<typeAlias alias="deptVO" type="sehwa.sys.dept.service.DeptVO" /> -->
+<!-- 		<typeAlias alias="userVO" type="sehwa.sys.user.service.UserVO" /> -->
+<!-- 		<typeAlias alias="menuVO" type="sehwa.sys.menu.service.MenuVO" /> -->
+<!-- 		<typeAlias alias="menuAccVO" type="sehwa.sys.mnac.service.MenuAccVO" /> -->
+<!-- 		<typeAlias alias="pageVO" type="sehwa.sys.page.service.PageVO" /> -->
+<!-- 		<typeAlias alias="ptabVO" type="sehwa.sys.ptab.service.PtabVO" /> -->
+<!-- 		<typeAlias alias="pgrdVO" type="sehwa.sys.pgrd.service.PgrdVO" /> -->
+<!-- 		<typeAlias alias="pcolVO" type="sehwa.sys.pcol.service.PcolVO" /> -->
+		
+		
+		<!-- inf (업무 관리) -->
+		<!-- 1.Ordr VO -->
+<!-- 		<typeAlias alias="custVO" type="sehwa.inf.ordr.cust.service.CustVO" /> -->
+<!-- 		<typeAlias alias="ptypVO" type="sehwa.inf.ordr.ptyp.service.PtypVO" /> -->
+<!-- 		<typeAlias alias="prodVO" type="sehwa.inf.ordr.prod.service.ProdVO" /> -->
+		
+		<!-- 2.Purc VO -->
+<!-- 		<typeAlias alias="suppVO" type="sehwa.inf.purc.supp.service.SuppVO" /> -->
+
+		<!-- 3.Devp VO -->
+<!-- 		<typeAlias alias="lineVO" type="sehwa.inf.devp.line.service.LineVO" /> -->
+<!-- 		<typeAlias alias="areaVO" type="sehwa.inf.devp.area.service.AreaVO" /> -->
+<!-- 		<typeAlias alias="eqpsVO" type="sehwa.inf.devp.eqps.service.EqpsVO" /> -->
+<!-- 		<typeAlias alias="matlVO" type="sehwa.inf.devp.matl.service.MatlVO" /> -->
+<!-- 		<typeAlias alias="bomsVO" type="sehwa.inf.devp.boms.service.BomsVO" /> -->
+		
+		<!-- 4.Manf VO -->
+		
+		<!-- 5.Test VO -->
+<!-- 		<typeAlias alias="specVO" type="sehwa.inf.test.spec.service.SpecVO" /> -->
+		
+		<!-- 6.Delv VO -->
+		
+		<!-- 7.Inst VO -->
+		
+		<!-- 8.Afsv VO -->
+
+		<!-- 사이드메뉴 VO -->
+<!-- 		<typeAlias alias="sideMenuVO" type="sehwa.cmn.cmn.service.SideMenuVO" /> -->
+		
+		<!-- 사용자목록 VO -->
+<!-- 		<typeAlias alias="usrVO" type="sehwa.mng.cmn.usr.service.UsrVO" /> -->
+		
+		<!-- 알람 VO -->
+<!-- 		<typeAlias alias="alarmVO" type="sehwa.cmn.cmn.service.AlarmVO" /> -->
+
+		<!-- 단말기 VO -->
+<!-- 		<typeAlias alias="mobileVO" type="sehwa.mng.cmn.mbl.service.MobileVO" /> -->
+		
+		<!-- 그리드용 VO -->
+<!-- 		<typeAlias alias="parseVO" type="sehwa.cmn.cmn.service.ParseVO" /> -->
+		
+		<!-- 공통정보 VO -->
+<!-- 		<typeAlias alias="deviceBaseVO" type="sehwa.cmn.cmn.DeviceBaseVO" /> -->
+		
+	</typeAliases>
+</configuration>
