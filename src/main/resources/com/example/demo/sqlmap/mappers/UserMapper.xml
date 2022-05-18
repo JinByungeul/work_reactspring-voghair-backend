@@ -4,7 +4,7 @@
 	PUBLIC "-//mybatis.org//DTDMapper3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 	
-	<mapper namespace="com.example.demo.mapper.UserMapper">
+	<mapper namespace="com.example.demo.user.service.impl.UserMapper">
 		<select id="userList" resultType="paramMap">
 			select user_id
 				, user_nm
@@ -18,12 +18,12 @@
 			where user_id = #{userId}
 		</select>
 		
-		<insert id="insertUser" parameterType="com.example.demo.vo.UserVO">
+		<insert id="insertUser" parameterType="com.example.demo.user.service.vo.UserVO">
 			insert into sys_user_mst
 			() values ()
 		</insert>
 		
-		<update id="updateUser" parameterType="com.example.demo.vo.UserVO">
+		<update id="updateUser" parameterType="com.example.demo.user.service.vo.UserVO">
 			update sys_user_mst
 			   set user_nm = #{userNm}
 		</update>
