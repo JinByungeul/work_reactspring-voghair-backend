@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.cmmn.dataaccess.util.ParamMap;
-import com.example.demo.user.service.impl.UserMapper;
+import com.example.demo.user.service.UserService;
 import com.example.demo.user.service.vo.UserVO;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -20,25 +20,27 @@ import com.example.demo.user.service.vo.UserVO;
 @RequestMapping("/users")
 public class UserController {
 	
+//	@Autowired
+//	UserMapper userMapper;
+	
 	@Autowired
-	UserMapper userMapper;
+	UserService userService;
 	
 	@GetMapping
 	public List<ParamMap> userList() {
-		System.out.println(userMapper.userList());
-		System.out.println("Success userList!");
-		return userMapper.userList();
+		System.out.println(userService.userList());
+		return userService.userList();
 	}
 	
 	@PostMapping
 	public void insertUser(@RequestBody UserVO user) {
-		userMapper.insertUser(user);
+		userService.insertUser(user);
 		System.out.println("Success insertUser"); 
 	}
 	
 	@GetMapping("/{userId}")
 	public ParamMap fetchUserByID(@PathVariable String userId) {
-		ParamMap fetchUser = userMapper.fetchUserById(userId);
+		ParamMap fetchUser = userService.fetchUserById(userId);
 		System.out.println(fetchUser);
 		return fetchUser;
 	}
