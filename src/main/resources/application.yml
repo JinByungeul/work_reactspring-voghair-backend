@@ -1,9 +1,13 @@
-mybatis:
-  config-location: classpath:com/example/demo/sqlmap/config/sql-mapper-config.xml
-  mapper-locations: classpath:com/example/demo/sqlmap/mappers/UserMapper.xml
+# datasource - maria
 spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     password: admin
     url: jdbc:mariadb://localhost:3306/spmp
     username: spmp
+
+# mybatis config
+mybatis:
+  config-location: classpath:com/example/demo/sqlmap/config/sql-mapper-config.xml
+  mapper-locations: classpath:com/example/demo/sqlmap/mappers/UserMapper.xml
+  
